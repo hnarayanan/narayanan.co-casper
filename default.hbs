@@ -21,15 +21,21 @@
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
-<body class="{{body_class}}">
+<body class="{{body_class}} nav-closed">
 
-    {{! Everything else gets inserted here }}
-    {{{body}}}
+    {{navigation}}
 
-    <footer class="site-footer clearfix">
-         <section class="copyright"><a href="{{@blog.url}}">Martina and Harish Narayanan</a> &copy; {{date format="YYYY"}}</section>
-         <section class="poweredby"><a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Some rights reserved.</a></section>
-    </footer>
+    <div class="site-wrapper">
+
+        {{! Everything else gets inserted here }}
+        {{{body}}}
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="{{@blog.url}}">Martina and Harish Narayanan</a> &copy; {{date format="YYYY"}}</section>
+            <section class="poweredby"><a href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Some rights reserved.</a></section>
+        </footer>
+
+    </div>
 
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
